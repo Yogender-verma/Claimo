@@ -28,14 +28,14 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="how" className="w-full bg-alt-bg py-16 md:py-24 border-b border-border scroll-mt-20">
+    <section id="how" className="w-full bg-alt-bg dark:bg-dark-alt py-16 md:py-24 border-b border-border dark:border-dark-border scroll-mt-20">
       <div className="max-w-content mx-auto px-6">
         {/* Section Header */}
         <div className="max-w-2xl mb-12 md:mb-16">
-          <h2 className="font-heading font-semibold text-ink tracking-tight mb-4">
+          <h2 className="font-heading font-semibold text-ink dark:text-dark-text tracking-tight mb-4">
             {t('how.title')}
           </h2>
-          <p className="text-muted text-base md:text-lg leading-relaxed">
+          <p className="text-muted dark:text-dark-muted text-base md:text-lg leading-relaxed">
             {t('how.lead')}
           </p>
         </div>
@@ -50,15 +50,15 @@ export const HowItWorks: React.FC = () => {
               <div>
                 {/* Teal circle with step number */}
                 <div
-                  className="w-10 h-10 rounded-full bg-teal text-white flex items-center justify-center font-heading font-bold text-base mb-6 shadow-sm"
+                  className="w-10 h-10 rounded-full bg-teal dark:bg-dark-teal text-white dark:text-dark-teal-text flex items-center justify-center font-heading font-bold text-base mb-6 shadow-sm"
                   aria-hidden="true"
                 >
                   {step.num}
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-ink mb-2">
+                <h3 className="font-heading font-semibold text-lg text-ink dark:text-dark-text mb-2">
                   {step.title}
                 </h3>
-                <p className="text-muted text-sm leading-relaxed">
+                <p className="text-muted dark:text-dark-muted text-sm leading-relaxed">
                   {step.desc}
                 </p>
               </div>

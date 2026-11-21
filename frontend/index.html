@@ -4,9 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Claimo - Find the scholarships you may qualify for in Telangana. See the exact route to claim them." />
+    <meta name="theme-color" content="#FFFFFF" id="theme-color-meta" />
     <title>Claimo · Find Your Scholarship Route</title>
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('claimo_theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var isDark = saved === 'dark' || (!saved && prefersDark);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            var meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#0E1A1F');
+          } else {
+            document.documentElement.classList.remove('dark');
+            var meta = document.getElementById('theme-color-meta');
+            if (meta) meta.setAttribute('content', '#FFFFFF');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <body class="bg-white text-ink font-body antialiased selection:bg-teal-light selection:text-teal-dark">
+  <body class="bg-white text-ink font-body antialiased selection:bg-teal-light selection:text-teal-dark dark:bg-dark-bg dark:text-dark-text dark:selection:bg-dark-card dark:selection:text-dark-teal">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

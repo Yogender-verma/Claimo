@@ -39,7 +39,7 @@ export const LandingPage: React.FC = () => {
   }, []);
 
   return (
-    <div id="top" ref={containerRef} className="min-h-screen flex flex-col bg-white overflow-x-hidden">
+    <div id="top" ref={containerRef} className="min-h-screen flex flex-col bg-white dark:bg-dark-bg text-ink dark:text-dark-text overflow-x-hidden">
       <Header />
       <main className="flex-1">
         <div className="fade-in-section is-visible">

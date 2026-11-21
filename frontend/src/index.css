@@ -66,6 +66,11 @@
     background-color: #FFFFFF;
   }
 
+  html.dark {
+    color: #E8F0F2;
+    background-color: #0E1A1F;
+  }
+
   html[lang="te"] body {
     font-family: 'Noto Sans Telugu', 'Inter', system-ui, -apple-system, sans-serif;
     line-height: 1.65;
@@ -80,12 +85,17 @@
     font-size: clamp(28px, 4vw, 40px);
     line-height: 1.25;
   }
+
+  /* Smooth color transition between themes (150-200ms) */
+  body, header, section, footer, .claimo-card, button, a {
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+  }
 }
 
 @layer components {
   /* Buttons: 12px radius, 15px 26px padding, min 44px touch height */
   .btn-primary {
-    @apply inline-flex items-center justify-center font-body font-medium rounded-btn text-white bg-teal transition-all duration-200 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal focus-visible:outline-offset-2;
+    @apply inline-flex items-center justify-center font-body font-medium rounded-btn text-white bg-teal transition-all duration-200 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal dark:focus-visible:outline-dark-teal focus-visible:outline-offset-2;
     padding: 15px 26px;
     min-height: 44px;
     background-color: #0F4C5C;
@@ -93,9 +103,17 @@
   .btn-primary:hover {
     background-color: #0A3844;
   }
+  .dark .btn-primary {
+    background-color: #4FB3C8;
+    color: #06232B;
+    font-weight: 600;
+  }
+  .dark .btn-primary:hover {
+    background-color: #3DA1B5;
+  }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center font-body font-medium rounded-btn bg-white transition-all duration-200 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal focus-visible:outline-offset-2;
+    @apply inline-flex items-center justify-center font-body font-medium rounded-btn bg-white transition-all duration-200 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal dark:focus-visible:outline-dark-teal focus-visible:outline-offset-2;
     padding: 15px 26px;
     min-height: 44px;
     color: #0F4C5C;
@@ -104,6 +122,54 @@
   .btn-secondary:hover {
     background-color: #E6F0F2;
   }
+  .dark .btn-secondary {
+    background-color: #16292F;
+    color: #4FB3C8;
+    border-color: #4FB3C8;
+  }
+  .dark .btn-secondary:hover {
+    background-color: #12232A;
+  }
+
+  /* Compact button styles for header auth */
+  .btn-header-primary {
+    @apply inline-flex items-center justify-center font-body font-medium rounded-btn text-white bg-teal transition-all duration-150 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal dark:focus-visible:outline-dark-teal focus-visible:outline-offset-2;
+    padding: 8px 18px;
+    min-height: 44px;
+    background-color: #0F4C5C;
+    font-size: 0.875rem;
+  }
+  .btn-header-primary:hover {
+    background-color: #0A3844;
+  }
+  .dark .btn-header-primary {
+    background-color: #4FB3C8;
+    color: #06232B;
+    font-weight: 600;
+  }
+  .dark .btn-header-primary:hover {
+    background-color: #3DA1B5;
+  }
+
+  .btn-header-secondary {
+    @apply inline-flex items-center justify-center font-body font-medium rounded-btn bg-white transition-all duration-150 active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal dark:focus-visible:outline-dark-teal focus-visible:outline-offset-2;
+    padding: 8px 18px;
+    min-height: 44px;
+    color: #0F4C5C;
+    border: 1.5px solid #0F4C5C;
+    font-size: 0.875rem;
+  }
+  .btn-header-secondary:hover {
+    background-color: #E6F0F2;
+  }
+  .dark .btn-header-secondary {
+    background-color: #16292F;
+    color: #4FB3C8;
+    border-color: #4FB3C8;
+  }
+  .dark .btn-header-secondary:hover {
+    background-color: #12232A;
+  }
 
   /* Cards: white, 1px border, 16px radius, 24px padding */
   .claimo-card {
@@ -111,11 +177,19 @@
     border: 1px solid #D5E0E3;
     border-radius: 16px;
     padding: 24px;
-    transition: transform 200ms ease, box-shadow 200ms ease;
+    transition: transform 200ms ease, box-shadow 200ms ease, background-color 180ms ease, border-color 180ms ease;
   }
   .claimo-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(16, 36, 43, 0.05);
+  }
+  .dark .claimo-card {
+    background-color: #16292F;
+    border-color: #2A4650;
+    box-shadow: none;
+  }
+  .dark .claimo-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
   }
 
   /* Motion sections */
@@ -146,5 +220,8 @@
   }
   .claimo-card:hover {
     transform: none !important;
+  }
+  body, header, section, footer, .claimo-card, button, a {
+    transition: none !important;
   }
 }

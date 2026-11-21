@@ -6,7 +6,7 @@
 
 ---
 
-## 1. Header & Navigation
+## 1. Header & Navigation (including Auth & Theme Toggle)
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -14,10 +14,29 @@
 | `nav.features` | Features | ప్రత్యేకతలు | TODO: native Telugu speaker to review |
 | `nav.promises` | Our promises | మా హామీలు | TODO: native Telugu speaker to review |
 | `nav.langToggle` | (Language switcher text) | తెలుగు / English | Verified |
+| `nav.signIn` | Sign in | సైన్ ఇన్ | TODO: native Telugu speaker to review |
+| `nav.signUp` | Sign up | సైన్ అప్ | TODO: native Telugu speaker to review |
+| `nav.themeDark` | Switch to dark mode | డార్క్ మోడ్‌కి మారండి | TODO: native Telugu speaker to review |
+| `nav.themeLight` | Switch to light mode | లైట్ మోడ్‌కి మారండి | TODO: native Telugu speaker to review |
+| `nav.menuOpen` | Open navigation menu | మెనూ తెరవండి | TODO: native Telugu speaker to review |
+| `nav.menuClose` | Close navigation menu | మెనూ మూసివేయండి | TODO: native Telugu speaker to review |
 
 ---
 
-## 2. Hero Section
+## 2. Authentication Placeholders (Sign In & Sign Up)
+
+| Key | English String | Telugu String | Review Status |
+| :--- | :--- | :--- | :--- |
+| `auth.signInHeading` | Sign in | సైన్ ఇన్ | TODO: native Telugu speaker to review |
+| `auth.signUpHeading` | Sign up | సైన్ అప్ | TODO: native Telugu speaker to review |
+| `auth.comingSoon` | Accounts coming soon | ఖాతాలు త్వరలో రానున్నాయి | TODO: native Telugu speaker to review |
+| `auth.honestMessage` | Accounts are coming soon. Claimo works right now without an account. No login needed. | ఖాతాలు త్వరలో అందుబాటులోకి రానున్నాయి. క్లెయిమో ప్రస్తుతం ఖాతా లేకుండానే పనిచేస్తుంది. లాగిన్ అవసరం లేదు. | TODO: native Telugu speaker to review |
+| `auth.continueWithout` | Continue without an account | ఖాతా లేకుండా కొనసాగించండి | TODO: native Telugu speaker to review |
+| `auth.backHome` | Back to Home | తిరిగి హోమ్‌కి | TODO: native Telugu speaker to review |
+
+---
+
+## 3. Hero Section
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -31,7 +50,7 @@
 
 ---
 
-## 3. Sample Result Card (Decorative / Sample Profile)
+## 4. Sample Result Card (Decorative / Sample Profile)
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -52,7 +71,7 @@
 
 ---
 
-## 4. Trust Strip
+## 5. Trust Strip
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -63,7 +82,7 @@
 
 ---
 
-## 5. Problem Section
+## 6. Problem Section
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -80,7 +99,7 @@
 
 ---
 
-## 6. How It Works
+## 7. How It Works
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -97,7 +116,7 @@
 
 ---
 
-## 7. Features
+## 8. Features
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -118,7 +137,7 @@
 
 ---
 
-## 8. Promises
+## 9. Promises
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -135,7 +154,7 @@
 
 ---
 
-## 9. Call To Action & Footer
+## 10. Call To Action & Footer
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |
@@ -147,7 +166,7 @@
 
 ---
 
-## 10. Placeholders (Story & Privacy routes)
+## 11. Placeholders (Story & Privacy routes)
 
 | Key | English String | Telugu String | Review Status |
 | :--- | :--- | :--- | :--- |

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -25,6 +26,23 @@ export default {
         },
         'alt-bg': '#F6F8F8',
         'body-teal': '#33484F',
+
+        // Dark theme tokens
+        dark: {
+          bg: '#0E1A1F',
+          alt: '#12232A',
+          card: '#16292F',
+          border: '#2A4650',
+          text: '#E8F0F2',
+          muted: '#A9BEC4',
+          teal: '#4FB3C8',
+          'teal-text': '#06232B',
+          'teal-hover': '#3DA1B5',
+          accent: '#F08A4B',
+          'accent-soft': '#3A2414',
+          'accent-text': '#FFC9A3',
+          hero: '#12303A',
+        },
       },
       fontFamily: {
         heading: ['"Space Grotesk"', 'system-ui', '-apple-system', 'sans-serif'],

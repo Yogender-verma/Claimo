@@ -3,7 +3,21 @@
     "how": "How it works",
     "features": "Features",
     "promises": "Our promises",
-    "langToggle": "తెలుగు"
+    "langToggle": "తెలుగు",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "themeDark": "Switch to dark mode",
+    "themeLight": "Switch to light mode",
+    "menuOpen": "Open navigation menu",
+    "menuClose": "Close navigation menu"
+  },
+  "auth": {
+    "signInHeading": "Sign in",
+    "signUpHeading": "Sign up",
+    "comingSoon": "Accounts coming soon",
+    "honestMessage": "Accounts are coming soon. Claimo works right now without an account. No login needed.",
+    "continueWithout": "Continue without an account",
+    "backHome": "Back to Home"
   },
   "hero": {
     "pill": "For students in Telangana · Free to use",
