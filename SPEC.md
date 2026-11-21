@@ -8,27 +8,33 @@
 ---
 
 ## 1. Overview
-Claimo is a web app designed to help low-income families and students in Telangana discover and complete applications for verified education and scholarship schemes.
-The platform turns unstructured stories (in Telugu or English) into structured facts via an LLM, processes those facts deterministically via a Python rules engine, guides users on document acquisition order (topological sort), and tracks application deadlines.
+Claimo is a web app designed to help low-income families and intermediate/college students in Telangana discover and complete applications for verified education and scholarship schemes.
+
+The platform extracts structured facts from user stories (in Telugu or English) using an LLM, evaluates eligibility deterministically via a Python rules engine, organizes document checklists in prerequisite order (topological sort), and tracks deadlines.
 
 ---
 
-## 2. Core Architectural Principles
-1. **Code decides, AI translates**: The LLM extracts facts; a deterministic rules engine evaluates eligibility. The LLM never decides eligibility.
-2. **Likely eligible, never guaranteed**: Every results screen emphasizes that official bodies make final decisions.
-3. **Verified official data only**: Never invent schemes, dates, amounts, or limits. Unlisted fields are marked `"not_published"`.
-4. **Zero ID collection**: Never collect or store Aadhaar, student IDs, phone contacts, or photos.
-5. **Privacy first**: No server logging of story text, income values, or request bodies.
-6. **User-reported tracking**: Status updates are purely user-reported; Claimo has no direct government portal integration.
+## 2. Architectural Updates & Changed Decisions
+1. **Optional Authentication (Changed Decision)**:
+   * **Earlier**: Completely anonymous, no login whatsoever.
+   * **Updated**: Firebase Authentication is added for optional user accounts (Email/Password + Google Sign-In).
+   * **Standing Rule**: Guest mode remains completely functional. The core journey (story input, confirmation card, scheme matches, document checklist, and application tracker) NEVER requires logging in.
+   * **No Server User DB**: No Firestore, Realtime Database, or Firebase Storage. Progress is retained in browser `localStorage`.
+2. **Admin Authorization (Changed Decision)**:
+   * **Earlier**: Admin password checked from an environment variable.
+   * **Updated**: Admin access requires a verified Firebase ID token passed via `Authorization: Bearer <token>`. Access is granted only if `email_verified == True` and the email is in the `ADMIN_EMAILS` allowlist.
 
 ---
 
-## 3. Future & Roadmap Considerations
+## 3. Core Principles
+* **Code decides, AI translates**: Deterministic Python rules engine makes all eligibility decisions.
+* **Likely eligible, never guaranteed**: Clear disclaimers on all result screens.
+* **Zero ID collection**: No Aadhaar, government IDs, phone numbers, or photos.
+* **No sensitive server logging**: No logging of stories, income, request bodies, or auth tokens.
 
-### Accounts & Authentication (Future)
-* **Current Status**: Claimo is 100% guest-mode and requires no accounts or login.
-* **Requirements if Accounts are Added Later**:
-  * Must collect the absolute **minimum data** required (email address only).
-  * Must **never collect Aadhaar, government ID numbers, phone contacts, or photos**.
-  * Any proposed account workflow must undergo a formal **privacy page review and wording update** before implementation.
-  * Must preserve the ability for users to use Claimo anonymously without an account.
+---
+
+## 4. Deploy Notes
+* **Firebase Authorized Domains**: Add your production and staging domains (e.g. `claimo.vercel.app`, `claimo.netlify.app`) to the Firebase Console under **Authentication -> Settings -> Authorized domains**.
+* **Environment Variables**: Configure all public variables (`VITE_FIREBASE_*`, `VITE_API_BASE_URL`) on the frontend host and secret variables (`FIREBASE_PROJECT_ID`, `FIREBASE_CLIENT_EMAIL`, `FIREBASE_PRIVATE_KEY`, `ADMIN_EMAILS`) on the backend host.
+* **Key Rotation**: If the `FIREBASE_PRIVATE_KEY` or service account credential is ever exposed, immediately revoke and re-issue the key in the Google Cloud / Firebase console and update host settings.
