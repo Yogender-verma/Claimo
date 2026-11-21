@@ -6,6 +6,8 @@ import LandingPage from './pages/LandingPage';
 const StoryPage = lazy(() => import('./pages/StoryPage'));
 const MatchesPage = lazy(() => import('./pages/MatchesPage'));
 const SchemeDetailPage = lazy(() => import('./pages/SchemeDetailPage'));
+const DocumentsPage = lazy(() => import('./pages/DocumentsPage'));
+const ApplicationsPage = lazy(() => import('./pages/ApplicationsPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const SignInPage = lazy(() => import('./pages/SignInPage'));
 const SignUpPage = lazy(() => import('./pages/SignUpPage'));
@@ -27,6 +29,8 @@ export const App: React.FC = () => {
             <Route path="/story" element={<StoryPage />} />
             <Route path="/matches" element={<MatchesPage />} />
             <Route path="/schemes/:id" element={<SchemeDetailPage />} />
+            <Route path="/documents" element={<DocumentsPage />} />
+            <Route path="/applications" element={<ApplicationsPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/signin" element={<SignInPage />} />
             <Route path="/signup" element={<SignUpPage />} />
