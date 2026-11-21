@@ -1,0 +1,92 @@
+[
+  {
+    "id": "profile_sc_inter",
+    "name": "Synthetic Student 1 (SC Intermediate)",
+    "profile": {
+      "applying_for": "me",
+      "income_amount": 150000.0,
+      "income_period": "year",
+      "facts": {
+        "caste": "SC",
+        "current_course": "intermediate",
+        "district": "Warangal",
+        "marks_percentage": 72.0
+      }
+    }
+  },
+  {
+    "id": "profile_st_degree",
+    "name": "Synthetic Student 2 (ST Degree B.Sc)",
+    "profile": {
+      "applying_for": "me",
+      "income_amount": 10000.0,
+      "income_period": "month",
+      "facts": {
+        "caste": "ST",
+        "current_course": "degree",
+        "district": "Adilabad",
+        "marks_percentage": 65.0
+      }
+    }
+  },
+  {
+    "id": "profile_bc_poly",
+    "name": "Synthetic Student 3 (BC Polytechnic)",
+    "profile": {
+      "applying_for": "child",
+      "income_amount": 18000.0,
+      "income_period": "month",
+      "facts": {
+        "caste": "BC",
+        "current_course": "polytechnic",
+        "district": "Hanumakonda",
+        "marks_percentage": 60.0
+      }
+    }
+  },
+  {
+    "id": "profile_oc_eng",
+    "name": "Synthetic Student 4 (OC Engineering)",
+    "profile": {
+      "applying_for": "me",
+      "income_amount": 250000.0,
+      "income_period": "year",
+      "facts": {
+        "caste": "OC",
+        "current_course": "engineering",
+        "district": "Hyderabad",
+        "marks_percentage": 82.0
+      }
+    }
+  },
+  {
+    "id": "profile_minority_inter",
+    "name": "Synthetic Student 5 (Minority Intermediate)",
+    "profile": {
+      "applying_for": "me",
+      "income_amount": 180000.0,
+      "income_period": "year",
+      "facts": {
+        "caste": "Minority",
+        "current_course": "intermediate",
+        "district": "Nizamabad",
+        "marks_percentage": 75.0
+      }
+    }
+  },
+  {
+    "id": "profile_sc_poly",
+    "name": "Synthetic Student 6 (SC Low-Income Polytechnic)",
+    "profile": {
+      "applying_for": "me",
+      "income_amount": 90000.0,
+      "income_period": "year",
+      "facts": {
+        "caste": "SC",
+        "current_course": "polytechnic",
+        "district": "Khammam",
+        "marks_percentage": 68.0
+      }
+    }
+  }
+]
