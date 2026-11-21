@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import HelpSettingsModal from './HelpSettingsModal';
 
 export const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -10,6 +11,7 @@ export const Header: React.FC = () => {
   const navigate = useNavigate();
   const [isDark, setIsDark] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const [helpModalOpen, setHelpModalOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const isDarkMode = document.documentElement.classList.contains('dark');
@@ -83,6 +85,19 @@ export const Header: React.FC = () => {
 
         {/* Controls */}
         <div className="flex items-center gap-1.5 sm:gap-2.5">
+          {/* Settings / Help Button */}
+          <button
+            type="button"
+            onClick={() => setHelpModalOpen(true)}
+            className="inline-flex items-center justify-center w-10 h-10 rounded-lg border border-border dark:border-dark-border text-ink dark:text-dark-text bg-alt-bg dark:bg-dark-card hover:border-teal dark:hover:border-dark-teal transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-teal"
+            aria-label="Help and Settings"
+          >
+            <svg className="w-4 h-4 text-ink dark:text-dark-text" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </button>
+
           {/* Theme Toggle */}
           <button
             type="button"
@@ -211,6 +226,9 @@ export const Header: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Help & Settings Modal */}
+      <HelpSettingsModal isOpen={helpModalOpen} onClose={() => setHelpModalOpen(false)} />
     </header>
   );
 };

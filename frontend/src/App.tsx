@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import LandingPage from './pages/LandingPage';
+import { BottomNav } from './components/BottomNav';
 
 const StoryPage = lazy(() => import('./pages/StoryPage'));
 const MatchesPage = lazy(() => import('./pages/MatchesPage'));
@@ -37,6 +38,7 @@ export const App: React.FC = () => {
             <Route path="/admin" element={<AdminPage />} />
             <Route path="*" element={<LandingPage />} />
           </Routes>
+          <BottomNav />
         </Suspense>
       </BrowserRouter>
     </AuthProvider>
