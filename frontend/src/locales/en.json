@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "how": "How it works",
+    "features": "Features",
+    "promises": "Our promises",
+    "langToggle": "తెలుగు"
+  },
+  "hero": {
+    "pill": "For students in Telangana · Free to use",
+    "title": "Find the scholarships you may qualify for. See the exact route to claim them.",
+    "teluguLine": "మీ పరిస్థితిని చెప్పండి. మేము దారి చూపిస్తాము.",
+    "description": "Tell Claimo your situation in your own words, in Telugu or English. It shows which schemes you are likely eligible for, which rule each match is based on, which documents to get first, and how to apply.",
+    "ctaPrimary": "Tell us your situation",
+    "ctaSecondary": "See how it works",
+    "note": "No login needed. We never ask for Aadhaar or any ID number."
+  },
+  "sampleCard": {
+    "header": "Your matches",
+    "pill": "Sample profile",
+    "ariaLabel": "Sample scholarship matches card showing likely eligible, possibly, and not likely tiers",
+    "likelyTier": "Likely eligible",
+    "likelyTitle": "[Scheme name from official source]",
+    "passPill": "Pass",
+    "rule1": "Course level matches the rule",
+    "rule2": "Family income is within [limit in official clause]",
+    "verified": "Source verified: [date] · Double-checked by a second person",
+    "possiblyTier": "Possibly, confirm one thing",
+    "possiblyTitle": "Income certificate period not confirmed yet. Choose per month or per year.",
+    "notLikelyTier": "Not likely, and why",
+    "notLikelyTitle": "Blocked by the income rule. It would change if your certified income is within the limit.",
+    "footer": "Likely eligible, not guaranteed. The official office makes the final decision."
+  },
+  "trustStrip": {
+    "item1": "\"Likely eligible\", never \"guaranteed\"",
+    "item2": "No Aadhaar or ID numbers collected",
+    "item3": "Official source and verified date on every scheme",
+    "item4": "Official fees shown, so no one overcharges you"
+  },
+  "problem": {
+    "title": "Why eligible students still miss out",
+    "lead": "It is rarely because they did not try. The route is confusing, and some people pay middlemen for help that should be free.",
+    "cards": {
+      "scattered": {
+        "title": "Information is scattered",
+        "desc": "Notices and portals each tell part of the story."
+      },
+      "rules": {
+        "title": "Rules are hard to read",
+        "desc": "Legal wording and limits are hard to apply to your own family."
+      },
+      "documents": {
+        "title": "The document list is unclear",
+        "desc": "One certificate often needs another first, and the order matters."
+      },
+      "middlemen": {
+        "title": "Middlemen fill the gap",
+        "desc": "People pay for help that the official process does not charge for."
+      }
+    }
+  },
+  "how": {
+    "title": "How Claimo works",
+    "lead": "Four steps from your story to a clear plan.",
+    "steps": {
+      "step1": {
+        "title": "Tell your story",
+        "desc": "Type or speak in Telugu or English. No long forms."
+      },
+      "step2": {
+        "title": "Confirm what we understood",
+        "desc": "Check the facts and correct anything. You always choose per month or per year for income."
+      },
+      "step3": {
+        "title": "See your matches and why",
+        "desc": "Every result shows the rule it is based on, from the official source."
+      },
+      "step4": {
+        "title": "Follow the route",
+        "desc": "Get documents in the right order, apply on the official site, and track deadlines."
+      }
+    }
+  },
+  "features": {
+    "title": "Built for trust, not just a list",
+    "lead": "Claimo explains its reasoning, so you can check it against the official source.",
+    "cards": {
+      "confirmation": {
+        "title": "Safe confirmation card",
+        "desc": "The AI only reads your story. You confirm every fact before any matching happens."
+      },
+      "tiers": {
+        "title": "Three clear tiers",
+        "desc": "Likely eligible, possibly (confirm one thing), or not likely, with the reason for each."
+      },
+      "nearMiss": {
+        "title": "Near-miss explanations",
+        "desc": "If you just miss a rule, we show what blocked you and what would change the result."
+      },
+      "docOrder": {
+        "title": "Documents in the right order",
+        "desc": "'Get this first' guidance, plus a one-page Visit Plan you can print."
+      },
+      "feeShield": {
+        "title": "Fee Shield",
+        "desc": "See the official cost of each step and the grievance route if anyone asks for more."
+      },
+      "telugu": {
+        "title": "Listen in Telugu",
+        "desc": "The main journey can be read aloud, with big buttons that work on a basic phone."
+      }
+    }
+  },
+  "promises": {
+    "title": "What Claimo will never do",
+    "lead": "Honesty matters more than looking impressive.",
+    "cards": {
+      "guarantee": {
+        "title": "Promise you will get it",
+        "desc": "Results say 'likely'. The official office makes the final decision."
+      },
+      "aadhaar": {
+        "title": "Ask for Aadhaar or ID numbers",
+        "desc": "Checklists say 'bring this document', never 'type its number'."
+      },
+      "status": {
+        "title": "Pretend to see your status",
+        "desc": "Tracking is what you report. Always check the official portal."
+      },
+      "guess": {
+        "title": "Guess missing facts",
+        "desc": "If a scheme does not publish something, we say 'Not published by the scheme'."
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to find your route?",
+    "text": "It takes about two minutes. No login, and your story is not saved on our server.",
+    "button": "Tell us your situation"
+  },
+  "footer": {
+    "text": "Claimo is a guide, not a government service, and it does not submit applications. Scheme details come from official sources and show their last-verified date. Demo screens use sample profiles only. Built for the Codebenders ACE Builders' Hackathon 2026.",
+    "privacy": "Privacy"
+  },
+  "placeholder": {
+    "storyTitle": "Tell Your Situation",
+    "privacyTitle": "Privacy Policy",
+    "comingSoon": "Coming soon",
+    "storyDesc": "The story input and facts confirmation module is under construction.",
+    "privacyDesc": "Our full privacy policy document is under construction.",
+    "backHome": "Back to Home"
+  }
+}
