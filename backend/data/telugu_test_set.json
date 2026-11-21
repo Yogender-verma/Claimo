@@ -1,0 +1,68 @@
+[
+  {
+    "id": "telugu_01",
+    "text": "నేను ఇంటర్మీడియట్ మొదటి సంవత్సరం చదువుతున్నాను. మా కుటుంబ వార్షిక ఆదాయం లక్ష రూపాయలు. మేము ఎస్సీ కులానికి చెందినవారము.",
+    "expected": {
+      "applying_for": "me",
+      "income_amount": 100000.0,
+      "income_period": "year",
+      "caste": "SC",
+      "current_course": "intermediate"
+    }
+  },
+  {
+    "id": "mixed_02",
+    "text": "My son is studying polytechnic diploma 2nd year. Monthly income is 15000. BC-B caste in Warangal district.",
+    "expected": {
+      "applying_for": "child",
+      "income_amount": 15000.0,
+      "income_period": "month",
+      "caste": "BC-B",
+      "current_course": "polytechnic",
+      "district": "Warangal"
+    }
+  },
+  {
+    "id": "telugu_03",
+    "text": "నేను డిగ్రీ B.Sc చదువుతున్నాను. మా నాన్నగారికి నెలకు పది వేల రూపాయలు వస్తాయి. మాది ST.",
+    "expected": {
+      "applying_for": "me",
+      "income_amount": 10000.0,
+      "income_period": "month",
+      "caste": "ST",
+      "current_course": "degree"
+    }
+  },
+  {
+    "id": "english_04",
+    "text": "I am in Intermediate MPC. Family income is two lakhs per year. SC category.",
+    "expected": {
+      "applying_for": "me",
+      "income_amount": 200000.0,
+      "income_period": "year",
+      "caste": "SC",
+      "current_course": "intermediate"
+    }
+  },
+  {
+    "id": "privacy_telugu_05",
+    "text": "నా పేరు రాజు. నా ఆధార్ నెంబర్ 1234 5678 9012. నేను ఇంటర్ చదువుతున్నాను. మా ఆదాయం 50000.",
+    "expected": {
+      "applying_for": "me",
+      "income_amount": 50000.0,
+      "income_period": null,
+      "current_course": "intermediate"
+    }
+  },
+  {
+    "id": "english_06",
+    "text": "Engineering 1st year student. Income not sure maybe 1 lakh per year. OC caste.",
+    "expected": {
+      "applying_for": "me",
+      "income_amount": 100000.0,
+      "income_period": "year",
+      "caste": "OC",
+      "current_course": "engineering"
+    }
+  }
+]

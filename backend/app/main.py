@@ -8,6 +8,12 @@ from app.config import FRONTEND_URL
 from app.auth import require_admin
 from app.models import UserProfile, Scheme, MatchResponse, SchemeMatch
 from app.engine import match_all_schemes
+from app.extract import (
+    ExtractRequest,
+    ExtractResponse,
+    extract_facts_from_story,
+    check_rate_limit,
+)
 
 app = FastAPI(
     title="Claimo API",
@@ -46,10 +52,21 @@ def get_loaded_schemes() -> List[Scheme]:
 def health_check():
   return {"status": "ok", "app": "Claimo"}
 
-@app.post("/api/extract")
-def extract_facts():
-  """Story text to facts via LLM (to be implemented in Part 2)."""
-  return {"status": "ready", "facts": {}}
+@app.post("/api/extract", response_model=ExtractResponse)
+def extract_facts(req: ExtractRequest, request: Request):
+  """
+  Story text to facts via stateless extractor.
+  Zero logging of story text, income values, or IP addresses.
+  """
+  client_ip = request.client.host if request.client else "unknown"
+  if not check_rate_limit(client_ip):
+    raise HTTPException(status_code=429, detail="Too many extraction requests. Please wait a moment.")
+
+  extracted = extract_facts_from_story(req.text)
+  return ExtractResponse(
+      success=True,
+      extracted=extracted,
+  )
 
 @app.post("/api/match", response_model=MatchResponse)
 def match_schemes(profile: UserProfile):

@@ -23,3 +23,9 @@ ADMIN_EMAILS: set[str] = {
     for email in raw_admin_emails.split(',')
     if email.strip()
 }
+
+# LLM Configuration
+MOCK_LLM = os.getenv('MOCK_LLM', 'true').strip().lower() in ('true', '1', 'yes')
+LLM_API_KEY = os.getenv('LLM_API_KEY', '').strip()
+
+
