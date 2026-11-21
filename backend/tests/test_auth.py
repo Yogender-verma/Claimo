@@ -84,3 +84,4 @@ def test_admin_route_fail_closed_when_unconfigured(monkeypatch):
   # Public route must still function cleanly
   res_health = client.get("/health")
   assert res_health.status_code == 200
+

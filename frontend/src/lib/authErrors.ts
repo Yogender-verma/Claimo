@@ -34,3 +34,4 @@ export function getFriendlyAuthErrorMessage(errorCode?: string): string {
       return 'auth.errors.generic';
   }
 }
+

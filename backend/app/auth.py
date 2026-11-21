@@ -84,3 +84,4 @@ def require_admin(token_data: dict = Depends(verify_token)) -> dict:
     raise HTTPException(status_code=403, detail="Administrator privileges required")
 
   return token_data
+

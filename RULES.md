@@ -38,3 +38,4 @@ These principles must never be broken under any circumstances.
   > *"Claimo cannot see the official status. Check the official portal."*
 * **Synthetic Testing Only**: Use synthetic sample profiles for tests. Never use real student data.
 * **Do Not Falsify Tests**: Official scheme rules are the single source of truth. Never alter a test or threshold to force a pass.
+
