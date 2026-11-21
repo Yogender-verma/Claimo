@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams, useLocation, useNavigate, Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import ReadAloudButton from '../components/ReadAloudButton';
 import { SchemeMatch, matchSchemes, UserProfileFacts } from '../lib/api';
 
 export const SchemeDetailPage: React.FC = () => {
@@ -167,9 +168,15 @@ export const SchemeDetailPage: React.FC = () => {
                 </div>
 
                 <div>
-                  <h1 className="font-heading font-bold text-2xl text-ink dark:text-dark-text">
-                    {scheme.scheme_name}
-                  </h1>
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <h1 className="font-heading font-bold text-2xl text-ink dark:text-dark-text">
+                      {scheme.scheme_name}
+                    </h1>
+                    <ReadAloudButton
+                      textToRead={`${scheme.scheme_name}. ${scheme.benefit_amount ? `Benefit: ${scheme.benefit_amount}` : ''}. ${scheme.near_miss_explanation || ''}`}
+                      label="Listen / వినండి"
+                    />
+                  </div>
                   <div className="flex flex-wrap items-center gap-3 text-xs text-muted dark:text-dark-muted mt-2">
                     {scheme.last_verified && scheme.last_verified !== 'not_published' && (
                       <span>Last Verified: {scheme.last_verified}</span>

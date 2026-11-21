@@ -28,5 +28,12 @@
   <body class="bg-white text-ink font-body antialiased selection:bg-teal-light selection:text-teal-dark dark:bg-dark-bg dark:text-dark-text dark:selection:bg-dark-card dark:selection:text-dark-teal">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').catch(function() {});
+        });
+      }
+    </script>
   </body>
 </html>

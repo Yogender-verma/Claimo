@@ -1,8 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import ReadAloudButton from './ReadAloudButton';
 
 export const SampleResultCard: React.FC = () => {
   const { t } = useTranslation();
+
+  const textToRead =
+    'తెలంగాణ పోస్ట్-మెట్రిక్ స్కాలర్‌షిప్. కుటుంబ వార్షిక ఆదాయం రెండు లక్షల రూపాయల లోపు ఉండాలి. ఎస్సీ, ఎస్టీ, లేదా బీసీ కేటగిరీ అయి ఉండాలి.';
 
   return (
     <div
@@ -10,7 +14,7 @@ export const SampleResultCard: React.FC = () => {
       aria-label={t('sampleCard.ariaLabel')}
       className="bg-white dark:bg-dark-card border border-border dark:border-dark-border rounded-card p-6 shadow-sm w-full max-w-[500px] mx-auto text-ink dark:text-dark-text"
     >
-      {/* Header with Sample Profile pill */}
+      {/* Header with Sample Profile pill and Read Aloud */}
       <div className="flex items-center justify-between pb-4 border-b border-border dark:border-dark-border">
         <div className="flex items-center gap-2">
           {/* Inline SVG bookmark icon */}
@@ -28,9 +32,12 @@ export const SampleResultCard: React.FC = () => {
             {t('sampleCard.header')}
           </span>
         </div>
-        <span className="inline-block text-xs font-semibold px-2.5 py-1 rounded-full bg-alt-bg dark:bg-dark-alt text-muted dark:text-dark-muted border border-border dark:border-dark-border">
-          {t('sampleCard.pill')}
-        </span>
+        <div className="flex items-center gap-2">
+          <ReadAloudButton textToRead={textToRead} label="తెలుగు" />
+          <span className="inline-block text-xs font-semibold px-2.5 py-1 rounded-full bg-alt-bg dark:bg-dark-alt text-muted dark:text-dark-muted border border-border dark:border-dark-border">
+            {t('sampleCard.pill')}
+          </span>
+        </div>
       </div>
 
       <div className="mt-4 space-y-3.5">

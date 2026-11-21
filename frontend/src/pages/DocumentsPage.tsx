@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import ReadAloudButton from '../components/ReadAloudButton';
 import { matchSchemes, Document, UserProfileFacts } from '../lib/api';
 
 type DocStatus = 'have' | 'in_progress' | 'missing';
@@ -119,6 +120,13 @@ export const DocumentsPage: React.FC = () => {
               </svg>
               <span>Print Visit Plan</span>
             </button>
+
+            <div className="self-start sm:self-auto">
+              <ReadAloudButton
+                textToRead={`దరఖాస్తుకు అవసరమైన పత్రాలు: ${documents.map((d, i) => `${i + 1}. ${d.name} from ${d.issuer}`).join('. ')}`}
+                label="Listen Plan / వినండి"
+              />
+            </div>
           </div>
 
           {/* PRINT-ONLY HEADER */}
