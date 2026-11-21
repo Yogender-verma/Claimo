@@ -4,6 +4,8 @@ import { AuthProvider } from './context/AuthContext';
 import LandingPage from './pages/LandingPage';
 
 const StoryPage = lazy(() => import('./pages/StoryPage'));
+const MatchesPage = lazy(() => import('./pages/MatchesPage'));
+const SchemeDetailPage = lazy(() => import('./pages/SchemeDetailPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const SignInPage = lazy(() => import('./pages/SignInPage'));
 const SignUpPage = lazy(() => import('./pages/SignUpPage'));
@@ -23,6 +25,8 @@ export const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/story" element={<StoryPage />} />
+            <Route path="/matches" element={<MatchesPage />} />
+            <Route path="/schemes/:id" element={<SchemeDetailPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/signin" element={<SignInPage />} />
             <Route path="/signup" element={<SignUpPage />} />
